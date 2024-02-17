@@ -38,6 +38,7 @@ p {
   height: 100vh;
   justify-content: center;
   align-items: center;
+  margin-top: 10vh;
 }
 
 .container-letter {
@@ -77,7 +78,7 @@ p {
 }
 
 .content-open {
-  transform: translateY(-240px);
+  transform: translateY(-310px);
   transition: transform 0.5s ease;
 }
 
@@ -140,6 +141,10 @@ p {
     border-right: 140px solid #ff989e;
     border-top: 80px solid transparent;
     border-bottom: 80px solid #ff8589;
+  }
+
+  .content-open {
+    transform: translateY(-240px);
   }
 
   .btn {
