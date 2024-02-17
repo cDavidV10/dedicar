@@ -1,0 +1,148 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  /* border: solid 2px; */
+}
+
+img,
+video,
+svg {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100dvh;
+  background-color: #fad7df;
+  display: grid;
+  place-items: center;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-letter {
+  position: relative;
+  /* overflow: hidden; */
+}
+
+.container-letter-open {
+  overflow: visible;
+  transition: overflow 500ms;
+}
+
+.cover {
+  position: absolute;
+  border-left: 140px solid transparent;
+  border-right: 140px solid transparent;
+  border-top: 80px solid #fe3334;
+  border-bottom: 80px solid transparent;
+}
+
+.letter {
+  border-left: 140px solid #ff989e;
+  border-right: 140px solid #ff989e;
+  border-top: 80px solid transparent;
+  border-bottom: 80px solid #ff8589;
+}
+
+.letter__content {
+  background-color: #fff;
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  margin-left: 30px;
+  padding: 8px;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.content-open {
+  transform: translateY(-240px);
+  transition: transform 0.5s ease;
+}
+
+.content-close {
+  transform: translateY(0);
+  transition: transform 0.5s ease;
+}
+
+.letter-open {
+  transform: rotatex(180deg);
+  transform-origin: top;
+  transition: transform 1s ease;
+}
+
+.letter-close {
+  transform: rotateX(0);
+  transform-origin: top;
+  transition: transform 1s ease;
+}
+
+.container-btn {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.btn {
+  width: 80px;
+  font-size: 1.2rem;
+  padding: 0.25rem;
+  background: inherit;
+  border: solid 2px #ff8589;
+  color: #fe3334;
+  transition: background-color 500ms, color 500ms, scale 500ms;
+}
+
+.btn:hover {
+  background-color: #fe3334;
+  cursor: pointer;
+  color: #fad7df;
+}
+
+.btn:active {
+  scale: 0.9;
+}
+
+@media screen and (width > 700px) {
+  .container {
+    height: 20vh;
+    margin-top: 15vh;
+  }
+  .cover {
+    border-left: 140px solid transparent;
+    border-right: 140px solid transparent;
+    border-top: 80px solid #fe3334;
+    border-bottom: 80px solid transparent;
+  }
+
+  .letter {
+    border-left: 140px solid #ff989e;
+    border-right: 140px solid #ff989e;
+    border-top: 80px solid transparent;
+    border-bottom: 80px solid #ff8589;
+  }
+
+  .btn {
+    width: 120px;
+  }
+}
